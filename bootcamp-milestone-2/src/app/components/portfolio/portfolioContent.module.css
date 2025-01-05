@@ -1,0 +1,75 @@
+/* Portfolio.module.css */
+
+/* Container for the projects - fixed two columns */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px; /* Reduced the max width */
+  margin: 0 auto;
+  padding-bottom: 80px; /* Increased padding at the bottom */
+}
+
+/* Styling for each project box */
+.project {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Ensures boxes adjust based on container width */
+  max-width: 400px; /* Reduced the max width of each project box */
+  margin: 0 auto; /* Centers the box */
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-details {
+  padding: 10px 0;
+}
+
+.project-name {
+  color: var(--accent-color);
+  font-size: 1em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.project-description {
+  color: var(--text-color);
+  margin: 8px 0;
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: var(--link-hover-color);
+}
+
+/* Add hover effects for the project box */
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+  }
+}

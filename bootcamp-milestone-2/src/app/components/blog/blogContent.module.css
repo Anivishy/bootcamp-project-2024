@@ -1,0 +1,77 @@
+/* Blog Container */
+.blogContainer {
+  padding: 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-bottom: 4rem; /* Extra padding to keep blogs from touching the footer */
+}
+
+/* Blog Title Styling */
+.blogTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Blog List Styling */
+.blogList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding-bottom: 4rem; /* Extra padding for spacing from footer */
+}
+
+/* Blog Card Styling */
+.blogCard {
+  background-color: #333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 400px;
+  text-align: left; /* Left-align content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blogCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.blogImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Blog Details Styling */
+.blogName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.blogDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Blog Link Styling */
+.blogLink {
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.blogLink:hover {
+  color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+}
