@@ -1,9 +1,9 @@
 .contactContainer {
-    padding: 40px 20px; /* Reduced horizontal padding */
-    background-color: #333; /* Grey background */
-    color: #fff; /* White text */
-    max-width: 600px; /* Smaller width for the form */
-    margin: 80px auto 40px auto; /* Added top margin for space from the navbar */
+    padding: 40px 20px;
+    background-color: #333; 
+    color: #fff; 
+    max-width: 600px; 
+    margin: 80px auto 40px auto; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -40,7 +40,7 @@
     border-radius: 5px;
     border: 1px solid #444;
     width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't affect the element's width */
+    box-sizing: border-box;
   }
   
   .input:focus,

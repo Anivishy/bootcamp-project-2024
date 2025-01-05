@@ -1,14 +1,12 @@
-/* Portfolio.module.css */
-
 /* Container for the projects - fixed two columns */
 .project-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
   padding: 20px;
-  max-width: 900px; /* Reduced the max width */
+  max-width: 900px; 
   margin: 0 auto;
-  padding-bottom: 80px; /* Increased padding at the bottom */
+  padding-bottom: 80px; 
 }
 
 /* Styling for each project box */
@@ -18,9 +16,9 @@
   padding: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s, box-shadow 0.2s;
-  width: 100%; /* Ensures boxes adjust based on container width */
-  max-width: 400px; /* Reduced the max width of each project box */
-  margin: 0 auto; /* Centers the box */
+  width: 100%; 
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 .project img {
@@ -70,6 +68,6 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .project-container {
-    grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+    grid-template-columns: 1fr;
   }
 }

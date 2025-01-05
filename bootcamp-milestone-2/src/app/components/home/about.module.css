@@ -4,12 +4,12 @@
     align-items: center;
     margin-top: 4vh;
     padding: 2rem;
-    background-color: #222; /* Darker background for the about section */
+    background-color: #222;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    max-width: 800px; /* Limit the width to make it narrower */
-    margin-left: auto; /* Centers the container */
-    margin-right: auto; /* Centers the container */
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
   }
   
   .about-image img {
@@ -47,7 +47,4 @@
       max-width: 100%;
     }
   
-    /* h1 {
-      font-size: 4rem;
-    } */
   }
