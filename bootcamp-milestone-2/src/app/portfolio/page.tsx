@@ -16,7 +16,7 @@ async function getPortfolioItems() {
       title: item.title,
       description: item.description,
       imageUrl: item.image, // Image URL
-      link: item.link, // Link to the project
+      slug: item.slug, // Link to the project
     }));
     return formattedItems; // Return the transformed portfolio items
   } catch (err) {

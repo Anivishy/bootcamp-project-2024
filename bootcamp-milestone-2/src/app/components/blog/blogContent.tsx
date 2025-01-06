@@ -14,7 +14,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ blogs }) => {
           <div key={blog.slug} className={styles.blogCard}>
             <h2 className={styles.blogName}>{blog.title}</h2>
             <p className={styles.blogDescription}>{blog.description}</p>
-            <Link href={`/blogs/${blog.slug}`} className={styles.blogLink}>
+            <Link href={`/blog/${blog.slug}`} className={styles.blogLink}>
               Read More
             </Link>
           </div>

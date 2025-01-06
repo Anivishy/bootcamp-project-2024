@@ -1,6 +1,13 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema, Document } from "mongoose";
 
-// typescript type (can also be an interface)
+// TypeScript type for Comment
+type IComment = {
+  user: string;
+  comment: string;
+  time: Date;
+};
+
+// TypeScript type for Blog
 type Blog = {
   title: string;
   slug: string;
@@ -9,10 +16,17 @@ type Blog = {
   content: string; // text content for individual blog page
   image: string; // url for string in public
   image_alt: string; // alt for image
-  comments: Comment[]; // array for comments
+  comments: IComment[]; // array for comments
 };
 
-// mongoose schema
+// Mongoose schema for Comment
+const commentSchema = new Schema<IComment>({
+  user: { type: String, required: true },
+  comment: { type: String, required: true },
+  time: { type: Date, required: true, default: Date.now },
+});
+
+// Mongoose schema for Blog with a nested comments array
 const blogSchema = new Schema<Blog>({
   title: { type: String, required: true },
   slug: { type: String, required: true },
@@ -21,9 +35,10 @@ const blogSchema = new Schema<Blog>({
   image: { type: String, required: true },
   image_alt: { type: String, required: true },
   content: { type: String, required: true },
+  comments: { type: [commentSchema], default: [] }, // Nested comments field
 });
 
-// defining the collection and model
+// Defining the collection and model
 const Blog = mongoose.models["blogs"] || mongoose.model("blogs", blogSchema);
 
 export default Blog;

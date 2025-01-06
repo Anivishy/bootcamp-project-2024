@@ -1,10 +1,9 @@
-// /components/portfolio/portfolioContent.tsx
-
 import React from "react";
-import styles from "./portfolioContent.module.css"; // Ensure you have the necessary styles
+import styles from "./portfolioContent.module.css";
+import Link from "next/link";
 
 type PortfolioContentProps = {
-  portfolioItems: { title: string; description: string; imageUrl: string }[];
+  portfolioItems: { title: string; description: string; imageUrl: string; slug: string;}[];
 };
 
 const PortfolioContent: React.FC<PortfolioContentProps> = ({ portfolioItems }) => {
@@ -21,9 +20,12 @@ const PortfolioContent: React.FC<PortfolioContentProps> = ({ portfolioItems }) =
             <h2 className={styles["project-name"]}>{item.title}</h2>
             <p className={styles["project-description"]}>{item.description}</p>
             {/* Optional: Add a button or link */}
-            <a href="#" className={styles["learn-more"]}>
+            {/* <a href="#" className={styles["learn-more"]}>
               View Project
-            </a>
+            </a> */}
+            <Link href={`/portfolio/${item.slug}`} className={styles["learn-more"]}>
+              View Project
+            </Link>
           </div>
         </div>
       ))}
